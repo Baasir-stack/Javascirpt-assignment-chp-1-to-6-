@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+ <!-- 1. Show an alert box on click on a link.  -->
+ <button onclick="alert('Welcome to Online Mobile shopping')">Click here to Alert</button>
+ <!-- 2. Display some Mobile images in browser. On click on an image Show the message in alert to user -->
+ <div style="text-align: center; margin-top: 70px;">
+     <img onclick="alert('Thanks for purchasing from us')" src="iphone.png" alt="" />
+     <img onclick="alert('Thanks for purchasing from us')" src="mi.jpg" alt="" />
+     <img onclick="alert('Thanks for purchasing from us')" src="moto.jpg" alt="" />
+     <img onclick="alert('Thanks for purchasing from us')" src="samsung.jpg" alt="" />
+ </div>
+
+ <!-- 3. Display students records in table and each row should contain a delete button. If you click on a button to delete a record, entire row should be deleted.
+-->
+ <form>
+     <label for="item">Add items: </label>
+     <input id="item" type="text" size="20" /><br />
+     <input id="submitButton" type="button" value="Add!" />
+ </form>
+ <ul id="ul"></ul>
+ <p>
+     Click an item to remove it from the list.
+ </p>
+
+ <!-- 5. Show a counter in browser. Counter should increase on click on increase
+button and decrease on click on decrease button. And show updated counter value in browser.  -->
+
+ <input type="button" class="btn btn-success" value="increase" onclick="button1()" />
+ <span id="output-area">0</span>
+ <input type="button" class="btn btn-success" value="decrease" onclick="button2()" />
+ <!-- task 3  -->
+ <div id="image">
+     Hover over an image below to display here.
+ </div>
+
+ <img class="preview" alt="iphone 11" src="imgs/iphone.PNG" onmouseover="upDate(this)" onmouseout="unDo()" />
+
+ <img class="preview" alt="mi a2" src="imgs/mi.PNG" onmouseover="upDate(this)" onmouseout="unDo()" />
+
+ <img class="preview" src="imgs/moto.PNG" alt="moto e4plus" onmouseover="upDate(this)" onmouseout="unDo()" />
+
+ <div class="modal-images p-5">
+            <h1>Images Model</h1>
+            <img data-toggle="modal" data-target="#exampleModal" onclick="showImg(this)" src="imgs/1.jpg" class="modal-img" alt="" />
+            <img data-toggle="modal" data-target="#exampleModal" onclick="showImg(this)" src="imgs/8.jpg" class="modal-img" alt="" />
+            <img data-toggle="modal" data-target="#exampleModal" onclick="showImg(this)" src="imgs/9.jpg" class="modal-img" alt="" />
+            <img data-toggle="modal" data-target="#exampleModal" onclick="showImg(this)" src="imgs/11.jpg" class="modal-img" alt="" />
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" alt="" id="modal_inner_image" class="modal_inner_style" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="para px-5">
+            <p id="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <button type="button" name="button" class="btn btn-primary ml-3" value="+" onclick="zoomIn()">Zoom In</button>
+            <button type="button" name="button" class="btn btn-primary" value="-" onclick="zoomOut()">Zoom Out</button>
+        </div>
+
+</body>
+<div class="form_submission" id="form">
+    <input type="text" name="name" value="" id="your_firstName" placeholder="First name" /> <br />
+    <input type="text" name="name" value="" id="your_lastName" placeholder="last name" /> <br />
+    <input type="email" name="email" value="" id="email_add" placeholder="Your email" /> <br />
+    <input type="password" name="password" value="" id="password" placeholder="Password" /> <br />
+
+    <button type="button" name="button" onclick="submit()">Submit</button>
+</div>
+
+<div class="content-area" id="area">
+    <h1>CAR MODELS</h1>
+    <p id="content-para">
+        You can use your vehicle identification number (VIN) to find information about your car, like equipment specifications, the model year and even the factory where it was manufactured.<br />
+        Find your VIN on the driver's side dashboard. They've been 17 digits long since model year 1981 <br />
+        <button href="javascript:void(0);" onClick="readmore()"><em>Click for more.</em></button>
+    </p>
+</div>
+
+<div class="table" id="table_data">
+    <h1>Enter table data</h1>
+    <div class="tableInput">
+        <input type="text" name="first name" value="" id="name" placeholder="First name" required /> <br />
+        <input type="text" name="last name" value="" id="lastName" placeholder="Last name" /> <br />
+        <input type="text" name="country" value="" id="country" placeholder="Conutry" /> <br />
+        <button type="button" name="button" id="btnAdd" onclick="addData()">Add</button> <br />
+        <input type="text" name="delValue" value="" id="deleteValue" placeholder="Enter serier no to delete a row" />
+        <button type="button" name="button" onclick="deleteMe()">Delete</button>
+    </div>
+    <br />
+    <table border="1px">
+        <tr>
+            <th>S NO</th>
+            <th>NAME</th>
+            <th>LAST NAME</th>
+            <th>COUNTRY</th>
+        </tr>
+
+        <tr>
+            <td>1.</td>
+            <td>Ali</td>
+            <td>Ahmed</td>
+            <td>Canada</td>
+        </tr>
+
+        <tr>
+            <td>2.</td>
+            <td>Osama</td>
+            <td>Yousuf</td>
+            <td>Turkey</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h1>DOM</h1>
+    <div id="form-content" class="content">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" />
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" /><label for="email">Email</label><input type="text" id="email" />
+    </div>
+
+    <div id="mainContent" class="content">
+        <p class="render" id="main_name">First Name : Alex</p>
+        <p class="render" id="lastName">Last Name: Bank</p>
+        <p class="render" id="main_email">Email : alexbank@example.com</p>
+        <p class="render" id="main_country">Country : Pakistan</p>
+        <p class="render" id="main_contact">contact : +92 300 1234567</p>
+    </div>
+</div>
+
+</html>
+
+
+
+
